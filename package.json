@@ -1,0 +1,24 @@
+{
+  "name": "netcell-phaser-boilerplate",
+  "version": "0.0.1",
+  "description": "Phaser Boilerplate with Inspector, using ES6, Browserify and Gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "phaser",
+    "boilerplate",
+    "phaserjs",
+    "game",
+    "html5",
+    "inspector",
+    "es6",
+    "babel",
+    "browserify",
+    "gulp",
+    "inspector"
+  ],
+  "author": "Nguyen Tuan Anh <anhnt.fami@gmail.com>",
+  "license": "MIT"
+}

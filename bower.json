@@ -1,0 +1,38 @@
+{
+  "name": "netcell-phaser-boilerplate",
+  "version": "0.0.1",
+  "authors": [
+    "Nguyen Tuan Anh <anhnt.fami@gmail.com>"
+  ],
+  "description": "Phaser Boilerplate with Inspector, using ES6, Browserify and Gulp",
+  "moduleType": [
+    "es6",
+    "globals"
+  ],
+  "keywords": [
+    "phaser",
+    "boilerplate",
+    "phaserjs",
+    "game",
+    "html5",
+    "inspector",
+    "es6",
+    "babel",
+    "browserify",
+    "gulp",
+    "inspector"
+  ],
+  "license": "MIT",
+  "homepage": "http://anhnt.ninja",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "cocoonjs-plugins": "~3.0.5",
+    "phaser": "~2.4.3",
+    "webfontloader": "~1.6.6",
+    "xml-for-cocoonjs": "https://github.com/videlais/xml-for-cocoonjs.git"
+  }
+}
