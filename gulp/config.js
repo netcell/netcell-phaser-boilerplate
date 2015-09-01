@@ -6,5 +6,4 @@ module.exports = {
 		serve : './www/game',
 		build : './build'
 	}
-
 }

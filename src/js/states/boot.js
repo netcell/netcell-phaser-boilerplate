@@ -6,6 +6,7 @@ var Performance     = require('../common/utils/Performance');
 
 export default class boot extends State {
 	create() {
+		super.create();
 		game.stateTransition = game.plugins.add(StateTransition);
 		game.performance = game.plugins.add(Performance);
 

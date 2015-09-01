@@ -24,7 +24,7 @@ gulp.task('default', function(callback){
 		callback();
 	})
 })
-
+/** TODO: Add zip task */
 gulp.task('build', function(callback){
 	runSequence(
 		['clean:build'],
