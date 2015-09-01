@@ -1,3 +1,4 @@
+require("babel/register");
 var gulp        = require('gulp');
 var runSequence = require('run-sequence');
 var notifier    = require('node-notifier');
@@ -13,7 +14,7 @@ gulp.task('default', function(callback){
 	runSequence(
 		['clean:serve'],
 		['watch:serve', 'copy:serve', 'html:serve', 'browserify:serve'],
-		['server:serve']
+		['copy:watch', 'server:serve'],
 	function(){
 		notifier.notify({
 			title: 'BUILD SUCCESS',
@@ -24,11 +25,11 @@ gulp.task('default', function(callback){
 	})
 })
 
-gulp.task('default', function(callback){
+gulp.task('build', function(callback){
 	runSequence(
-		['clean:serve'],
-		['copy:serve', 'html:serve', 'browserify:serve'],
-		['server:serve']
+		['clean:build'],
+		['copy:build', 'html:build', 'browserify:build'],
+		['server:build'],
 	function(){
 		notifier.notify({
 			title: 'BUILD SUCCESS',

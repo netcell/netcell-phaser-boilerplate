@@ -1,7 +1,7 @@
 var game  = require('../common/game');
 var State = require('../classes/core/State');
 
-class preload extends State {
+export default class preload extends State {
 	preload() {
 
 	}

@@ -1,3 +1,4 @@
+var game     = require('../../common/game');
 var signals  = require('../../common/signals');
 var fileList = require('../../config/fileList');
 /**

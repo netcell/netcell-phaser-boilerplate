@@ -4,7 +4,7 @@ var State = require('../classes/core/State');
 var StateTransition = require('../common/utils/StateTransition');
 var Performance     = require('../common/utils/Performance');
 
-class boot extends State {
+export default class boot extends State {
 	create() {
 		game.stateTransition = game.plugins.add(StateTransition);
 		game.performance = game.plugins.add(Performance);
@@ -15,7 +15,6 @@ class boot extends State {
 		this.stage.disableVisibilityChange = true;
 		this.scale.pageAlignHorizontally   = true;
 		this.scale.pageAlignVertically     = true;
-		this.scale.setScreenSize(true);
 		this.game.scale.refresh();
 		/** Number of pointers */
 		this.game.input.maxPointers = 1;

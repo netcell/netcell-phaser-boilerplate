@@ -35,6 +35,7 @@ function checkDead(node){
 
 export default class Performance extends Phaser.Plugin {
 	constructor(game, thresolds = [25, 35]){
+		super(game);
 		/** Enable advancedTiming for Phaser */
 		game.time.advancedTiming = true;
 		/** Array of the data nodes */
@@ -91,7 +92,7 @@ export default class Performance extends Phaser.Plugin {
 		}
 	}
 	update(){
-		var fps  = game.time.fps;
+		var fps  = this.game.time.fps;
 		var time = Date.now();
 		this.createNode(fps, time, this.timeStep);
 

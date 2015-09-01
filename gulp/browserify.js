@@ -1,6 +1,6 @@
 var gulp       = require('gulp');
-var source     = require('vinyl-source-stream');
 var browserify = require('browserify');
+var watchify   = require('watchify');
 var babelify   = require('babelify');
 var rebundle   = require('./rebundle');
 var folder     = require('./config').folder;
@@ -11,7 +11,7 @@ var folder     = require('./config').folder;
  * @param  {Boolean} watch - set to true to use watchify
  * @param  {Boolean} minify - set to true to minify the output
  */
-function browserify(dest, sourceMap, watch, minify) {
+function bundle(dest, sourceMap, watch, minify) {
 	/** source maps setting */
 	watchify.args.debug = sourceMap;
 	/** Browserify bundler */
@@ -23,6 +23,7 @@ function browserify(dest, sourceMap, watch, minify) {
 		comments : false,
 		ignore   : 'node_modules'
 	}));
+	bundler.transform('rfolderify');
 	/** ! Browserify transforms */
 	/** Rebundle on update if watchify is used */
 	watch && bundler.on('update', function(){
@@ -33,9 +34,9 @@ function browserify(dest, sourceMap, watch, minify) {
 }
 
 gulp.task('browserify:build', function() {
-	return browserify(folder.build + '/js', false, false, true);
+	return bundle(folder.build + '/js', false, false, true);
 });
 
 gulp.task('browserify:serve', function() {
-	return browserify(folder.serve + '/js', true, true, false);
+	return bundle(folder.serve + '/js', true, true, false);
 });
