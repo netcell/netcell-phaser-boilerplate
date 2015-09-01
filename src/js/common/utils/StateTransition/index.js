@@ -4,6 +4,7 @@
  * Wrap `to` method. The arguments includes:
  * - opts - The options of game.stateTransition.configure, set to null to use the defaultTransition.
  * - The rest are in the arguments of game.state.start.
+ * TODO: Make some changes to the original plugin and issue a PR
  */
 
 var defaultTransition = require('./defaultTransition');
